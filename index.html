@@ -12,7 +12,25 @@
   <!-- Firebase SDKs for Cloud Sync -->
   <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-app.js"></script>
   <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-database.js"></script>
+<!-- Firebase SDKs (v10) -->
+<script type="module">
+  import { initializeApp } from "https://www.gstatic.com/firebasejs/10.8.0/firebase-app.js";
+  import { getDatabase, ref, set, get, child, onValue } from "https://www.gstatic.com/firebasejs/10.8.0/firebase-database.js";
 
+  const firebaseConfig = {
+    apiKey: "AIzaSyDbG-yDrll_fYXEDjLN9Ay0kwJ556Xvdeg",
+    authDomain: "smart-call-9950a.firebaseapp.com",
+    databaseURL: "https://smart-call-9950a-default-rtdb.firebaseio.com",
+    projectId: "smart-call-9950a",
+    storageBucket: "smart-call-9950a.firebasestorage.app",
+    messagingSenderId: "965909062156",
+    appId: "1:965909062156:web:60572b1b3409a7e5284429",
+    measurementId: "G-B19VDHLM39"
+  };
+
+  const app = initializeApp(firebaseConfig);
+  window.db = getDatabase(app);
+</script>
   <!-- Web App Manifest for Add to Home Screen PWA -->
   <link rel="manifest" id="manifestPlaceholder">
 
